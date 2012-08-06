@@ -10,6 +10,13 @@
 		"id": 2,
 		"title": "jQPad",
 		"description": "An iPad web framework",
-		"thumb": "items/thumbs/1-jqpad.png"
+		"thumb": "items/thumbs/2-jqpad.png"
+	},
+
+	{
+		"id": 3,
+		"title": "Lynx.io",
+		"description": "Design for Lynx.io",
+		"thumb": "items/thumbs/3-lynx.png"
 	}]
 }
