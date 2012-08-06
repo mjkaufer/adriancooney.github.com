@@ -1,0 +1,7 @@
+{
+	"title": "jQPad",
+	"client": "None, open-source",
+	"link": "http://github.com/grayscale/jqpad",
+	"images": ["items/img/2/screenshot.png"],
+	"description": "A full iPad web framework for building iPad enabled sites quickly and easily. I never managed to finish v2 due to personal commitments and thus fell inactive. You can still clone the source and contribute!"
+}

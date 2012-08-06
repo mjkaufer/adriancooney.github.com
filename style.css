@@ -1,0 +1,434 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700,300);
+@import url(reset.css);
+
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: transform 50ms;
+	-webkit-perspective-origin: 50% 50%;
+	-webkit-perspective: 2000;
+
+	-moz-transform-origin: 50% 50%;
+	-moz-transform-style: preserve-3d;
+	-moz-transition: transform 50ms;
+	-moz-perspective-origin: 50% 50%;
+	-moz-perspective: 2000;
+
+	-o-transform-origin: 50% 50%;
+	-o-transform-style: preserve-3d;
+	-o-transition: transform 50ms;
+	-o-perspective-origin: 50% 50%;
+	-o-perspective: 2000;
+
+	transform-origin: 50% 50%;
+	transform-style: preserve-3d;
+	transition: transform 50ms;
+	perspective-origin: 50% 50%;
+	perspective: 2000;
+}
+
+.container {
+	width: 948px;
+	margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-transition: background 400ms;
+    -moz-transition: background 100ms;
+    -o-transition: background 100ms;
+    transition: background 100ms;
+    background: rgba(0,0,0,0.2);
+}
+
+header {
+	height: 170px;
+}
+
+.logo {
+	float: left;
+	display: block;
+	height: 140px;
+	width: 140px;
+	background: rgba(0,0,0,0.8) url(img/logo.png) no-repeat -19px -18px;
+	border-radius: 200px;
+	margin: 14px;
+}
+
+.logo a {
+	display: block;
+	width: inherit;
+	height: inherit;
+}
+
+header h1 {
+	display: none;
+}
+
+header h3 {
+	display: none;
+}
+
+header nav {
+	float: right;
+	margin-top: 60px;
+}
+
+header nav li {
+	display: inline-block;
+	cursor: pointer;
+}
+
+header nav li a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 6px;
+	background: rgba(0,0,0,0.8);
+	margin: 4px;
+	-webkit-transition: background 100ms ease-out;
+	-moz-transition: background 100ms ease-out;
+	-o-transition: background 100ms ease-out;
+	transition: background 100ms ease-out;
+}
+
+header nav li a:hover {
+	background: rgba(0,0,0,1);
+}
+
+#loading {
+	position: absolute;
+	margin-left: 414px;
+	margin-top: 200px;
+	text-align: center;
+	width: 120px;
+	height: 80px;
+	background: url(img/loader.gif) no-repeat center top;
+	display: none;
+	opacity: 0;
+	-webkit-transition: opacity 300ms;
+	-moz-transition: opacity 300ms;
+	-o-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+
+#loading span {
+	display: block;
+	margin-top: 40;
+	color: #777;
+}
+
+#back {
+	padding: 8px;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	margin-bottom: 14px;
+}
+
+#back a {
+	text-decoration: none;
+	color: #444;
+}
+
+.content {
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+	min-height: 480px;
+}
+
+.content.fadeOut {
+	-webkit-transform: rotateX(-20deg) scale(0.9) translate(0, 40px);
+	-moz-transform: rotateX(-20deg) scale(0.9) translate(0, 40px);
+	-o-transform: rotateX(-20deg) scale(0.9) translate(0, 40px);
+	transform: rotateX(-20deg) scale(0.9) translate(0, 40px);
+	opacity: 0;
+}
+
+.content:hover::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+}
+
+.content article {
+	width: 300px;
+	height: 150px;
+	margin: 14px 14px 0 0;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,0.05);
+	-webkit-transition: background-position 6s linear, -webkit-transform 300ms ease-out;
+	-moz-transition: background-position 6s linear, -moz-transform 300ms ease-out;
+	-o-transition: background-position 6s linear, -o-transform 300ms ease-out;
+	transition: background-position 6s linear, transform 300ms ease-out;
+}
+
+.content article:nth-child(1), .content article:nth-child(2), .content article:nth-child(3) {
+	margin-top: 0;
+}
+
+.content article.inactive {
+	-webkit-transform: rotateX(-30deg) scale(0.9) translate(0, 10px);
+	-moz-transform: rotateX(-30deg) scale(0.9) translate(0, 10px);
+	-o-transform: rotateX(-30deg) scale(0.9) translate(0, 10px);
+	transform: rotateX(-30deg) scale(0.9) translate(0, 10px);
+}
+
+.content article:nth-child(3n) {
+	margin-right: 0;
+}
+
+.content article:hover div {
+	-webkit-transform: translate(0, -60px);
+	-moz-transform: translate(0, -60px);
+	-o-transform: translate(0, -60px);
+	transform: translate(0, -60px);
+}
+
+.content article div {
+	background: rgba(0,0,0,0.7);
+	padding: 14px;
+	color: #fff;
+	margin-top: 150px;
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+	min-height: 140px;
+}
+
+.content article div h3 {
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.content article div p {
+	font-size: 80%;
+	line-height: 140%;
+}
+
+.content section h1 {
+	font-size: 38px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-left: 20px;
+}
+
+.content section h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.content section p {
+	line-height: 140%;
+	margin-left: 20px;
+}
+
+.content section h4 {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 4px 0;
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	padding: 4px;
+	color: rgba(0,0,0,0.4);
+}
+
+.content section {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.item section ul li {
+	margin-bottom: 12px;
+	margin-left: 20px;
+}
+
+.item section ul li h4 {
+	margin-left: 0;
+}
+
+.item section a {
+	color: #00b3ff;
+}
+
+.item section:first-child {
+	text-align: center;
+}
+
+.item section div {
+	display: inline-block;
+	width: 130px;
+	height: 140px;
+	margin: 4px;
+	border: 3px solid #fff;
+	outline: 1px solid #bbb;
+	overflow: hidden;
+}
+
+.item section div img {
+	width: 100%;
+	min-height: 100%;
+	cursor: pointer;
+}
+
+.content > img {
+	max-width: 940px;
+	float: left;
+	cursor: default;
+}
+
+.item section div:first-child {
+	width: 94%;
+	margin: 14px;
+	height: auto;
+	border: none;
+	outline: none;
+	overflow: auto;
+}
+
+.item section div:first-child img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	min-height: 0;
+}
+
+.item section aside p {
+	line-height: 140%;
+}
+
+.item section aside h4 {
+	margin-left: 20px;
+}
+
+.about .tools {
+	background: url(img/tools.png) no-repeat center center;
+	height: 276px;
+}
+
+.about .skills h3 {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 4px 0;
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	padding: 4px;
+	color: rgba(0,0,0,0.4);
+}
+
+.about .skills h4 {
+	background: rgba(0,0,0,0.8);
+	margin: 6px 0;
+	font-size: 12px;
+	padding: 4px;
+	width: 0%;
+	color: #fff;
+	-webkit-transition: width 500ms ease-out;
+	-moz-transition: width 500ms ease-out;
+	-o-transition: width 500ms ease-out;
+	transition: width 500ms ease-out;
+}
+
+.about .skills h4:hover {
+	background: rgba(0,0,0,1);
+}
+
+.about .skills h4 a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.about .skills h4 a:hover {
+	text-decoration: underline;
+}
+
+.contact input[type=text], .contact textarea {
+	width: 100%;
+	margin: 8px 0;
+	background: rgba(0,0,0,0.8);
+	border: none;
+	padding: 4px 8px;
+	outline: none;
+	font-size: 18px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #fff;
+}
+
+.contact textarea {
+	height: 240px;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 30px;
+	resize:vertical;
+}
+
+.contact textarea::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.contact input[type=submit] {
+	float: right;
+	height: 30px;
+	border: none;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	margin: 0;
+	font-size: 16px;
+	width: 80px;
+	background: #000;
+	color: #fff;
+	margin-top: -30px;
+	position: relative;
+	z-index: 1;
+}
+
+.content a {
+	color: #00b3ff;
+}
+
+.contact ol {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.contact ol li {
+	margin: 8px;
+	list-style: disc;
+	margin-left: 20px;
+}
+
+.contact a strong {
+	font-weight: bold;
+}
+
+footer {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+footer p {
+	color: rgba(0,0,0,0.3);
+	font-size: 13px;
+}
+
+footer span {
+	float: right;
+	color: rgba(0,0,0,0.3);
+	font-size: 13px;
+	margin-top: -12px;
+}
+
+footer span a {
+	color: inherit;
+}
