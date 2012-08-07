@@ -1,3 +1,8 @@
+<?php require 'ItemClass.php'; 
+
+
+
+?>
 <html>
 <head>
 	<title>Admin panel</title>
@@ -17,8 +22,14 @@
 	<form>
 		<h4>Title</h4>
 		<input type="text" name="title" />
-		<h4>Client</h4>
-		<input type="text" name="client" />
+		<div class="left">
+			<h4>Client</h4>
+			<input type="text" name="client" />
+		</div>
+		<div class="right">
+			<h4>ID</h4>
+			<input type="number" name="id" />
+		</div>
 		<h4>Link</h4>
 		<input type="text" name="link" />
 		<h4>Brief Description</h4>

@@ -352,7 +352,7 @@ header nav li a:hover {
 	text-decoration: underline;
 }
 
-input[type=text], textarea {
+input[type=text], textarea, input[type=number] {
 	width: 100%;
 	margin: 8px 0;
 	background: rgba(0,0,0,0.8);
@@ -404,6 +404,20 @@ input[type=submit] {
 
 .admin input[type=file]:nth-child(odd) {
 	background: rgba(0,0,0,0.15);
+}
+
+.admin .left, .admin .right {
+	height: 80px;
+}
+
+.admin .left {
+	float: left;
+	width: 82%;
+}
+
+.admin .right {
+	float: right;
+	width: 15%;
 }
 
 .contact input[type=submit] {
