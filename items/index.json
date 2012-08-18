@@ -18,5 +18,12 @@
 		"title": "Lynx.io",
 		"description": "Design for Lynx.io",
 		"thumb": "items/thumbs/3-lynx.png"
+	},
+
+	{
+		"id": 4,
+		"title": "Reddi",
+		"description": "Pokki HTML5 Desktop application",
+		"thumb": "items/thumbs/4-reddi.png"
 	}]
 }
