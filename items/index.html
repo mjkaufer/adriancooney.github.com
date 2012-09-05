@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Reddit chuckle</title>
+</head>
+<body>
+<audio autoplay id="audis" />
+</body>
+<script type="text/javascript">
+var aude = document.getElementById("audis"),
+	aud = new window.webkitAudioContext();
+navigator.webkitGetUserMedia({audio: true}, function(stream) {
+	var s = aud.createMediaElementSource(stream);
+
+	aude.src = s;
+}, function() {
+	alert("Error!");
+});
+</script>
+</html>
