@@ -85,7 +85,6 @@ fn = {
 
 	route: function(hash) {
 		if(hash.match(/(#?!?)/)) hash = hash.replace(/#?!?/, "");
-		console.log(hash);
 		if(hash.match(/\/?about/)) fn.getPage("about");
 		if(hash.match(/\/?contact/)) fn.getPage("contact");
 		if(hash.match(/\/?item\/(\d+)\/?(?:images)?/)) fn.getItem(hash.match(/\/item\/(\d+)\/?(?:images)?/)[1]);
